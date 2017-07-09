@@ -2,6 +2,8 @@
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(drawMainLChart);
 google.charts.setOnLoadCallback(drawSecLChart);
+google.charts.setOnLoadCallback(drawFrameworkChart);
+google.charts.setOnLoadCallback(drawDBChart);
 
 function drawMainLChart() {
     var dataArray = [
@@ -42,10 +44,52 @@ function drawSecLChart() {
         title: 'secondary language used in projects',
         pieHole: 0.5,
         slices: {
-            0: { color: '#d3d3d3' }
+            0: { color: '#d3d3d3', offset: 0.1 }
           }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('secondary-languages-chart'));
+    chart.draw(data, options);
+}
+
+function drawFrameworkChart() {
+    var dataArray = [
+        ['Language', 'days'],
+        ['none', 680],
+        ['rails', 105],
+        ['django', 30],
+        ['symfony', 90]
+    ];
+    var data = google.visualization.arrayToDataTable(dataArray);
+    var options = {
+        title: 'frameworks used in projects',
+        pieHole: 0.5,
+        slices: {
+            0: { color: '#d3d3d3', offset: 0.1 }
+          }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('frameworks-chart'));
+    chart.draw(data, options);
+}
+
+function drawDBChart() {
+    var dataArray = [
+        ['Language', 'days'],
+        ['none', 680],
+        ['rails', 105],
+        ['django', 30],
+        ['symfony', 90]
+    ];
+    var data = google.visualization.arrayToDataTable(dataArray);
+    var options = {
+        title: 'frameworks used in projects',
+        pieHole: 0.5,
+        slices: {
+            0: { color: '#d3d3d3', offset: 0.1 }
+          }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('frameworks-chart'));
     chart.draw(data, options);
 }
