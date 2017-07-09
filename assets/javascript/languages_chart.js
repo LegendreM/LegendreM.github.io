@@ -87,7 +87,6 @@ google.charts.setOnLoadCallback(drawFrameworkChart);
 google.charts.setOnLoadCallback(drawDBChart);
 google.charts.setOnLoadCallback(drawCategoryChart);
 google.charts.setOnLoadCallback(drawCategorySankeyChart);
-google.charts.setOnLoadCallback(drawLangSankeyChart);
 
 
 function getMainLangs() {
