@@ -75,7 +75,7 @@ var projectsData = [
     ['Rootme', 4, [12, 2], 0, 0, 60, [7]],
     ['LFS', 12, [4], 0, 0, 15, [6]],
     ['automatic clothes recognition', 2, [13, 0], 0, 0, 95, [1, 12]],
-    ['instant study explorer', 1, [8, 10], 1, 1, 115, [1, 3]],
+    ['instant study explorer', 1, [8, 10], 1, 1, 115, [12, 3]],
 ]
 
 
@@ -86,6 +86,8 @@ google.charts.setOnLoadCallback(drawSecLChart);
 google.charts.setOnLoadCallback(drawFrameworkChart);
 google.charts.setOnLoadCallback(drawDBChart);
 google.charts.setOnLoadCallback(drawCategoryChart);
+google.charts.setOnLoadCallback(drawCategorySankeyChart);
+google.charts.setOnLoadCallback(drawLangSankeyChart);
 
 
 function getMainLangs() {
@@ -172,6 +174,29 @@ function getCategories() {
     return dataArray
 }
 
+function getSankeyLangCat() {
+    var dataArray = [];
+    var tmpdict = {};
+    for (var i = 0; i < projectsData.length; i++) {
+        if (!tmpdict[langData[projectsData[i][1]]]) {
+            tmpdict[langData[projectsData[i][1]]] = {}
+        }
+        for (var j = 0; j < projectsData[i][6].length; j++) {
+            if (tmpdict[langData[projectsData[i][1]]][categoryData[projectsData[i][6][j]]]) {
+                tmpdict[langData[projectsData[i][1]]][categoryData[projectsData[i][6][j]]] += projectsData[i][5] / projectsData[i][6].length;
+            } else {
+                tmpdict[langData[projectsData[i][1]]][categoryData[projectsData[i][6][j]]] = projectsData[i][5] / projectsData[i][6].length;
+            }
+        }
+    }
+    for (var k in tmpdict) {
+        for (var l in tmpdict[k]) {
+            dataArray.push([k, l, tmpdict[k][l]])
+        }
+    }
+    return dataArray
+}
+
 function drawMainLChart() {
     var dataArray = getMainLangs()
     var data = google.visualization.arrayToDataTable(dataArray);
@@ -246,5 +271,24 @@ function drawCategoryChart() {
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('category-chart'));
+    chart.draw(data, options);
+}
+
+function drawCategorySankeyChart() {
+    var dataArray = getSankeyLangCat()
+    // console.log(dataArray)
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Weight');
+    data.addRows(dataArray);
+
+    // Sets chart options.
+    var options = {
+        width: 600,
+    };
+
+    // Instantiates and draws our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey-categories-langs'));
     chart.draw(data, options);
 }
