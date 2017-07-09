@@ -58,7 +58,7 @@ function drawFrameworkChart() {
         ['none', 680],
         ['rails', 105],
         ['django', 30],
-        ['symfony', 90]
+        ['symfony', 95]
     ];
     var data = google.visualization.arrayToDataTable(dataArray);
     var options = {
@@ -77,19 +77,19 @@ function drawDBChart() {
     var dataArray = [
         ['Language', 'days'],
         ['none', 680],
-        ['rails', 105],
-        ['django', 30],
-        ['symfony', 90]
+        ['elastic search', 105],
+        ['mysql', 60],
+        ['postgresql', 95]
     ];
     var data = google.visualization.arrayToDataTable(dataArray);
     var options = {
-        title: 'frameworks used in projects',
+        title: 'databases used in projects',
         pieHole: 0.5,
         slices: {
             0: { color: '#d3d3d3', offset: 0.1 }
           }
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('frameworks-chart'));
+    var chart = new google.visualization.PieChart(document.getElementById('db-chart'));
     chart.draw(data, options);
 }
