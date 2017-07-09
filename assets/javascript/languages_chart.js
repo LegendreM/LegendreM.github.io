@@ -46,6 +46,7 @@ var categoryData = [
     'R&D',              //[12]
     'DevOps',           //[13]
     'parsing',          //[14]
+    'knewline sharing', //[15]
 ]
 // name, main lang, sec langs, frameworks, databases, time (days), categories
 var projectsData = [
@@ -76,6 +77,7 @@ var projectsData = [
     ['LFS', 12, [4], 0, 0, 15, [6]],
     ['automatic clothes recognition', 2, [13, 0], 0, 0, 95, [1, 12]],
     ['instant study explorer', 1, [8, 10], 1, 1, 115, [12, 3]],
+    ['Learning C', 4, [0], 0, 0, 7, [15]],
 ]
 
 
