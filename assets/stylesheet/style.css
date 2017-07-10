@@ -11,8 +11,8 @@ margin-top: -45px;
 }
 
 .donnut-chart {
-width: 600px;
-height: 400px;
+width: 600px !important;
+height: 400px !important;
 }
 
 .sankey-chart-container {
@@ -28,8 +28,8 @@ margin-left: 80px;
 }
 
 .sankey-chart {
-width: 1000px;
-height: 585px;
+width: 1000px !important;
+height: 585px !important;
 }
 
 .overlay {
