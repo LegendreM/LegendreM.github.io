@@ -12,36 +12,50 @@
 <body>
 
     <h1>Developpeur</h1>
-    <div class="card donnut-chart-container">
-        <div class="donnut-chart">
-            <div id="main-languages-chart" class="languages-chart"></div>
-            <div id="cnt-main-languages" class="overlay"></div>
+    <div class="columns">
+        <div class="column"></div>
+        <div class="column is-narrow">
+            <div class="columns">
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                        <div id="main-languages-chart" class="donnut-chart"></div>
+                        <div id="cnt-main-languages" class="overlay"></div>
+                    </div>
+                </div>
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="secondary-languages-chart" class="donnut-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="frameworks-chart" class="donnut-chart"></div>
+                    </div>
+                </div>
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="db-chart" class="donnut-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="category-chart" class="donnut-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="card sankey-chart-container column is-narrow">
+                    <div class="sankey-chart-content">
+                    <div id="sankey-categories-langs" class="sankey-chart"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card donnut-chart-container">
-        <div class="donnut-chart">
-        <div id="secondary-languages-chart" class="languages-chart"></div>
-        </div>
-    </div>
-    <div class="card donnut-chart-container">
-        <div class="donnut-chart">
-        <div id="frameworks-chart" class="languages-chart"></div>
-        </div>
-    </div>
-    <div class="card donnut-chart-container">
-        <div class="donnut-chart">
-        <div id="db-chart" class="languages-chart"></div>
-        </div>
-    </div>
-    <div class="card donnut-chart-container">
-        <div class="donnut-chart">
-        <div id="category-chart" class="languages-chart"></div>
-        </div>
-    </div>
-    <div class="card sankey-chart-container">
-        <div class="sankey-chart">
-        <div id="sankey-categories-langs" class="languages-chart"></div>
-        </div>
+        <div class="column"></div>
     </div>
 
 </body>
