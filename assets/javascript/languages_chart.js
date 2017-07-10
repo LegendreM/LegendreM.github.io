@@ -204,6 +204,9 @@ function drawMainLChart() {
     var options = {
         title: 'Main languages used in projects',
         pieHole: 0.5,
+        'tooltip' : {
+            trigger: 'none'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('main-languages-chart'));
@@ -223,7 +226,10 @@ function drawSecLChart() {
         pieHole: 0.5,
         slices: {
             0: { color: '#d3d3d3', offset: 0.1 }
-          }
+          },
+        'tooltip' : {
+            trigger: 'none'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('secondary-languages-chart'));
@@ -238,7 +244,10 @@ function drawFrameworkChart() {
         pieHole: 0.5,
         slices: {
             0: { color: '#d3d3d3', offset: 0.1 }
-          }
+          },
+        'tooltip' : {
+            trigger: 'none'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('frameworks-chart'));
@@ -253,7 +262,10 @@ function drawDBChart() {
         pieHole: 0.5,
         slices: {
             0: { color: '#d3d3d3', offset: 0.1 }
-          }
+          },
+        'tooltip' : {
+            trigger: 'none'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('db-chart'));
@@ -268,7 +280,10 @@ function drawCategoryChart() {
         pieHole: 0.5,
         slices: {
             0: { color: '#d3d3d3', offset: 0.1 }
-          }
+          },
+        'tooltip' : {
+            trigger: 'none'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('category-chart'));
