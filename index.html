@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel=StyleSheet href="assets/bulma-0.4.3/css/bulma.css" type="text/css" media=screen>
     <link rel=StyleSheet href="assets/stylesheet/style.css" type="text/css" media=screen>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -11,25 +12,36 @@
 <body>
 
     <h1>Developpeur</h1>
-    <div class="chart-container">
-        <div id="main-languages-chart" class="languages-chart"></div>
-        <div id="cnt-main-languages" class="overlay"></div>
-        <div class="overlay-label">total time:</div>
+    <div class="card donnut-chart-container">
+        <div class="donnut-chart">
+            <div id="main-languages-chart" class="languages-chart"></div>
+            <div id="cnt-main-languages" class="overlay"></div>
+        </div>
     </div>
-    <div class="chart-container">
+    <div class="card donnut-chart-container">
+        <div class="donnut-chart">
         <div id="secondary-languages-chart" class="languages-chart"></div>
+        </div>
     </div>
-    <div class="chart-container">
+    <div class="card donnut-chart-container">
+        <div class="donnut-chart">
         <div id="frameworks-chart" class="languages-chart"></div>
+        </div>
     </div>
-    <div class="chart-container">
+    <div class="card donnut-chart-container">
+        <div class="donnut-chart">
         <div id="db-chart" class="languages-chart"></div>
+        </div>
     </div>
-    <div class="chart-container">
+    <div class="card donnut-chart-container">
+        <div class="donnut-chart">
         <div id="category-chart" class="languages-chart"></div>
+        </div>
     </div>
-    <div class="chart-container">
+    <div class="card sankey-chart-container">
+        <div class="sankey-chart">
         <div id="sankey-categories-langs" class="languages-chart"></div>
+        </div>
     </div>
 
 </body>
