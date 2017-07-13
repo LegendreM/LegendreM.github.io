@@ -4,60 +4,129 @@
 <head>
     <link rel=StyleSheet href="assets/bulma-0.4.3/css/bulma.css" type="text/css" media=screen>
     <link rel=StyleSheet href="assets/stylesheet/style.css" type="text/css" media=screen>
+    <link rel=StyleSheet href="assets/stylesheet/font-awesome.css" type="text/css" media=screen>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="assets/javascript/languages_chart.js"></script>
 </head>
 
 <body>
+    <div id="app">
+        <div class="columns">
+            <div class="column">
 
-    <h1>Developpeur</h1>
-    <div class="columns">
-        <div class="column"></div>
-        <div class="column is-narrow">
-            <div class="columns">
-                <div class="card donnut-chart-container column is-narrow">
-                    <div class="donnut-chart-content">
-                        <div id="main-languages-chart" class="donnut-chart"></div>
-                        <div id="cnt-main-languages" class="overlay"></div>
+            </div>
+            <div class="column is-narrow">
+                <div class="columns">
+                    <div class="card donnut-chart-container column is-narrow">
+                        <div class="donnut-chart-content">
+                            <div id="main-languages-chart" class="donnut-chart"></div>
+                            <div id="cnt-main-languages" class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="card donnut-chart-container column is-narrow">
+                        <div class="donnut-chart-content">
+                        <div id="secondary-languages-chart" class="donnut-chart"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="card donnut-chart-container column is-narrow">
-                    <div class="donnut-chart-content">
-                    <div id="secondary-languages-chart" class="donnut-chart"></div>
+                <div class="columns">
+                    <div class="card donnut-chart-container column is-narrow">
+                        <div class="donnut-chart-content">
+                        <div id="frameworks-chart" class="donnut-chart"></div>
+                        </div>
+                    </div>
+                    <div class="card donnut-chart-container column is-narrow">
+                        <div class="donnut-chart-content">
+                        <div id="db-chart" class="donnut-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="card donnut-chart-container column is-narrow">
+                        <div class="donnut-chart-content">
+                        <div id="category-chart" class="donnut-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="card sankey-chart-container column is-narrow">
+                        <div class="sankey-chart-content">
+                        <div id="sankey-categories-langs" class="sankey-chart"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="columns">
-                <div class="card donnut-chart-container column is-narrow">
-                    <div class="donnut-chart-content">
-                    <div id="frameworks-chart" class="donnut-chart"></div>
+            <div class="column">
+                <nav class="panel">
+                    <p class="panel-heading">
+                        Repositories
+                    </p>
+                    <div class="panel-block">
+                        <p class="control has-icons-left">
+                        <input class="input is-small" type="text" placeholder="Search">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        </p>
                     </div>
-                </div>
-                <div class="card donnut-chart-container column is-narrow">
-                    <div class="donnut-chart-content">
-                    <div id="db-chart" class="donnut-chart"></div>
+                    <p class="panel-tabs">
+                        <a class="is-active">All</a>
+                        <a>Public</a>
+                        <a>Private</a>
+                        <a>Sources</a>
+                        <a>Forks</a>
+                    </p>
+                    <a class="panel-block is-active">
+                        <span class="panel-icon">
+                        <i class="fa fa-book"></i>
+                        </span>
+                        bulma
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                        <i class="fa fa-book"></i>
+                        </span>
+                        marksheet
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                        <i class="fa fa-book"></i>
+                        </span>
+                        minireset.css
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                        <i class="fa fa-book"></i>
+                        </span>
+                        jgthms.github.io
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                        <i class="fa fa-code-fork"></i>
+                        </span>
+                        daniellowtw/infBoard
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                        <i class="fa fa-code-fork"></i>
+                        </span>
+                        mojs
+                    </a>
+                    <label class="panel-block">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <div class="panel-block">
+                        <button class="button is-primary is-outlined is-fullwidth">
+                        Reset all filters
+                        </button>
                     </div>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="card donnut-chart-container column is-narrow">
-                    <div class="donnut-chart-content">
-                    <div id="category-chart" class="donnut-chart"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="card sankey-chart-container column is-narrow">
-                    <div class="sankey-chart-content">
-                    <div id="sankey-categories-langs" class="sankey-chart"></div>
-                    </div>
-                </div>
+                </nav>
             </div>
         </div>
-        <div class="column"></div>
+        <script src="https://unpkg.com/vue"></script>
     </div>
-
 </body>
 
 </html>
