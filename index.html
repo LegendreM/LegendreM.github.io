@@ -57,7 +57,7 @@
             <div class="column">
                 <nav class="panel">
                     <p class="panel-heading">
-                        Repositories
+                        Projects
                     </p>
                     <div class="panel-block">
                         <p class="control has-icons-left">
@@ -72,11 +72,11 @@
                         <a>Public</a>
                         <a>Private</a>
                     </p>
-                    <a class="panel-block is-active">
+                    <a class="panel-block" v-for="project in projectsData">
                         <span class="panel-icon">
                         <i class="fa fa-dot-circle-o"></i>
                         </span>
-                        bulma
+                        {{ project[0] }}
                     </a>
                 </nav>
             </div>
