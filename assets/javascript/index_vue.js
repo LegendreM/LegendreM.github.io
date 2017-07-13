@@ -6,6 +6,7 @@ var app = new Vue({
     dbData: dbData,
     categoryData: categoryData,
     projectsData: projectsData,
+    panelTabs: [{name: "All", isActive: true}, {name: "Public", isActive: false}, {name: "Private", isActive: false}]
   },
   mounted: function () {
     google.charts.load('current', { 'packages': ['corechart'] });

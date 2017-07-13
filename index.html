@@ -68,9 +68,7 @@
                         </p>
                     </div>
                     <p class="panel-tabs">
-                        <a class="is-active">All</a>
-                        <a>Public</a>
-                        <a>Private</a>
+                        <a v-for="tab in panelTabs" v-bind:class="{ 'is-active': tab.isActive }">{{ tab.name }}</a>
                     </p>
                     <a class="panel-block" v-for="project in projectsData">
                         <span class="panel-icon">
