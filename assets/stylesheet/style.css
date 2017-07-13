@@ -49,3 +49,42 @@ margin-left: 180px;
 .lang-tag {
     margin-left: 5px; 
 }
+
+@media only screen and (max-width: 500px) {
+    .donnut-chart-container {
+        width: auto;
+        height: 300px;
+    }
+    .donnut-chart-content {
+        margin-left: -85px;
+        margin-top: -50px;
+    }
+
+    .donnut-chart {
+        width: 450px !important;
+        height: 400px !important;
+    }
+    .overlay {
+        width: 70px;
+        height: 60px;
+        font: normal 15px Arial, sans-serif;
+        margin-top: 175px;
+        margin-left: 135px;
+    }
+
+    .sankey-chart-container {
+        width: auto;
+        height: 300px;
+        overflow-x: scroll;
+    }
+
+        .sankey-chart-content {
+        position: relative;
+        margin-left: -5px;
+    }
+
+        .sankey-chart {
+        width: 500px !important;
+        height: 270px !important;
+    }
+}
