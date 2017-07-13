@@ -70,7 +70,7 @@
                     <p class="panel-tabs">
                         <a v-for="(tab, index) in panelTabs" v-bind:class="{ 'is-active': tab.isActive }" v-bind:id="index" v-on:click="clickTab">{{ tab.name }}</a>
                     </p>
-                    <a class="panel-block" v-for="project in projectsData">
+                    <a class="panel-block" v-for="project in filterTab">
                         <span class="panel-icon">
                         <i class="fa fa-dot-circle-o"></i>
                         </span>

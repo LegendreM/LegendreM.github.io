@@ -6,7 +6,11 @@ var app = new Vue({
         dbData: dbData,
         categoryData: categoryData,
         projectsData: projectsData,
-        panelTabs: [{name: "All", isActive: true}, {name: "Public", isActive: false}, {name: "Private", isActive: false}]
+        panelTabs: [
+            {name: "All", isActive: true},
+            {name: "Public", isActive: false, filters: {index: 7, value: true}},
+            {name: "Private", isActive: false, filters: {index: 7, value: false}}
+        ]
     },
     mounted: function () {
         google.charts.load('current', { 'packages': ['corechart'] });
@@ -24,6 +28,19 @@ var app = new Vue({
                 this.panelTabs[i].isActive = false;
             }
             this.panelTabs[event.target.id].isActive = true;
+        }
+    },
+    computed: {
+        filterTab: function (filter) {
+            var tab = this.panelTabs.filter(function( obj) {
+                return obj.isActive === true;
+            });
+            if (tab[0].filters) {
+                return this.projectsData.filter(function( obj ) {
+                    return obj[this.index] === this.value;
+                }, tab[0].filters);
+            }
+            return this.projectsData;
         }
     }
 })
