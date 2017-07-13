@@ -77,6 +77,14 @@
                         <i class="fa fa-dot-circle-o"></i>
                         </span>
                         {{ project[0] }}
+                        <div class="block">
+                            <span class="tag lang-tag is-primary">
+                                {{ langData[project[1]] }}
+                            </span>
+                            <span class="tag lang-tag" v-for="category in project[6]">
+                                {{ categoryData[category] }}
+                            </span>
+                        </div>
                     </a>
                 </nav>
             </div>

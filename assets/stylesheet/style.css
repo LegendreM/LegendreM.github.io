@@ -45,3 +45,7 @@ font: normal 20px Arial, sans-serif;
 margin-top: 165px;
 margin-left: 180px;
 }
+
+.lang-tag {
+    margin-left: 5px; 
+}
