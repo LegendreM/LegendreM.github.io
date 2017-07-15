@@ -8,84 +8,82 @@
 </head>
 
 <body>
-    <div id="app">
-        <div class="columns">
-            <div class="column">
+    <div id="app" class="columns">
+        <div class="column">
 
-            </div>
-            <div class="column is-narrow">
+        </div>
+        <div class="column is-narrow">
                 <div class="columns">
-                    <div class="card donnut-chart-container column is-narrow">
-                        <div class="donnut-chart-content">
-                            <div id="main-languages-chart" class="donnut-chart"></div>
-                            <div id="cnt-main-languages" class="overlay"></div>
-                        </div>
-                    </div>
-                    <div class="card donnut-chart-container column is-narrow">
-                        <div class="donnut-chart-content">
-                        <div id="secondary-languages-chart" class="donnut-chart"></div>
-                        </div>
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                        <div id="main-languages-chart" class="donnut-chart"></div>
+                        <div id="cnt-main-languages" class="overlay"></div>
                     </div>
                 </div>
-                <div class="columns">
-                    <div class="card donnut-chart-container column is-narrow">
-                        <div class="donnut-chart-content">
-                        <div id="frameworks-chart" class="donnut-chart"></div>
-                        </div>
-                    </div>
-                    <div class="card donnut-chart-container column is-narrow">
-                        <div class="donnut-chart-content">
-                        <div id="db-chart" class="donnut-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="card donnut-chart-container column is-narrow">
-                        <div class="donnut-chart-content">
-                        <div id="category-chart" class="donnut-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="card sankey-chart-container column is-narrow">
-                        <div class="sankey-chart-content">
-                        <div id="sankey-categories-langs" class="sankey-chart"></div>
-                        </div>
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="secondary-languages-chart" class="donnut-chart"></div>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <nav class="panel">
-                    <p class="panel-heading">
-                        Projects
+            <div class="columns">
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="frameworks-chart" class="donnut-chart"></div>
+                    </div>
+                </div>
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="db-chart" class="donnut-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="card donnut-chart-container column is-narrow">
+                    <div class="donnut-chart-content">
+                    <div id="category-chart" class="donnut-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="card sankey-chart-container column is-narrow">
+                    <div class="sankey-chart-content">
+                    <div id="sankey-categories-langs" class="sankey-chart"></div>
+                    </div>
+                </div>
+            </div>
+                        <nav class="panel">
+                <p class="panel-heading">
+                    Projects
+                </p>
+                <div class="panel-block">
+                    <p class="control has-icons-left">
+                    <input class="input is-small" type="text" placeholder="Search">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-search"></i>
+                    </span>
                     </p>
-                    <div class="panel-block">
-                        <p class="control has-icons-left">
-                        <input class="input is-small" type="text" placeholder="Search">
-                        <span class="icon is-small is-left">
-                            <i class="fa fa-search"></i>
+                </div>
+                <p class="panel-tabs">
+                    <a v-for="(tab, index) in panelTabs" v-bind:class="{ 'is-active': tab.isActive }" v-bind:id="index" v-on:click="clickTab">{{ tab.name }}</a>
+                </p>
+                <a class="panel-block" v-for="project in filterTab">
+                    <span class="panel-icon">
+                    <i class="fa fa-dot-circle-o"></i>
+                    </span>
+                    {{ project[0] }}
+                    <div class="block">
+                        <span class="tag lang-tag is-primary">
+                            {{ langData[project[1]] }}
                         </span>
-                        </p>
+                        <span class="tag lang-tag" v-for="category in project[6]">
+                            {{ categoryData[category] }}
+                        </span>
                     </div>
-                    <p class="panel-tabs">
-                        <a v-for="(tab, index) in panelTabs" v-bind:class="{ 'is-active': tab.isActive }" v-bind:id="index" v-on:click="clickTab">{{ tab.name }}</a>
-                    </p>
-                    <a class="panel-block" v-for="project in filterTab">
-                        <span class="panel-icon">
-                        <i class="fa fa-dot-circle-o"></i>
-                        </span>
-                        {{ project[0] }}
-                        <div class="block">
-                            <span class="tag lang-tag is-primary">
-                                {{ langData[project[1]] }}
-                            </span>
-                            <span class="tag lang-tag" v-for="category in project[6]">
-                                {{ categoryData[category] }}
-                            </span>
-                        </div>
-                    </a>
-                </nav>
-            </div>
+                </a>
+            </nav>
+        </div>
+        <div class="column">
         </div>
     </div>
 </body>
