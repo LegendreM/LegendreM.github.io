@@ -65,7 +65,7 @@ var projectsData = [
     ['libft ASM', 3, [0], 0, 0, 14, [10], false],
     ['exams C', 4, [0], 0, 0, 7, [0],false],
     ['piscine C++', 5, [0], 0, 0, 30, [5, 4], false],
-    ['stage DxO', 5, [0], 0, 0, 190, [10, 9, 1, 12], false],
+    ['stage DxO', 5, [0], 0, 0, 190, [10, 1, 12], false],
     ['Fillit', 4, [0], 0, 0, 15, [4, 10], false],
     ['piscine Unity', 6, [0], 3, 0, 30, [5], false],
     ['wolf 3D', 4, [0], 0, 0, 30, [5, 2], true],
