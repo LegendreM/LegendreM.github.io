@@ -17,15 +17,15 @@ var langData = [
 ]
 
 var frameworkData = [
-    'none',     //[0]
-    'rails',    //[1]
-    'django',   //[2]
-    'unity',    //[3]
-    'symfony'   //[4]
+    'frameworkless',    //[0]
+    'rails',            //[1]
+    'django',           //[2]
+    'unity',            //[3]
+    'symfony'           //[4]
 ]
 
 var dbData = [
-    'none',
+    'needless',
     'elastic search',
     'mysql',
     'postgresql'
