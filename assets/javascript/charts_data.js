@@ -1,6 +1,6 @@
 //name
 var langData = [
-    'none',     //[0]
+    'needless', //[0]
     'Ruby',     //[1]
     'Python',   //[2]
     'Assembly', //[3]
