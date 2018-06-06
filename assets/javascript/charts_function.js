@@ -46,6 +46,22 @@ function getDB() {
     return dataArray
 }
 
+function getLocation() {
+    var dataArray = [['Language', 'days']];
+    var tmpdict = {};
+    for (var i = 0; i < projectsData.length; i++) {
+        if (tmpdict[placeData[projectsData[i][8]]]) {
+            tmpdict[placeData[projectsData[i][8]]] += projectsData[i][5];
+        } else {
+            tmpdict[placeData[projectsData[i][8]]] = projectsData[i][5];
+        } 
+    }
+    for (var k in tmpdict) {
+        dataArray.push([k, tmpdict[k]])
+    }
+    return dataArray
+}
+
 function getSecLangs() {
     var dataArray = [['Language', 'days']];
     var tmpdict = {};
@@ -176,6 +192,21 @@ function drawDBChart() {
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('db-chart'));
+    chart.draw(data, options);
+}
+
+function drawLocationChart() {
+    var dataArray = getLocation()
+    var data = google.visualization.arrayToDataTable(dataArray);
+    var options = {
+        title: 'Places where I worked',
+        pieHole: 0.5,
+        'tooltip' : {
+            trigger: 'none'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('places-chart'));
     chart.draw(data, options);
 }
 

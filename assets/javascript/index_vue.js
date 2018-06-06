@@ -20,6 +20,7 @@ var app = new Vue({
         google.charts.setOnLoadCallback(drawFrameworkChart);
         google.charts.setOnLoadCallback(drawDBChart);
         google.charts.setOnLoadCallback(drawCategoryChart);
+        google.charts.setOnLoadCallback(drawLocationChart);
         google.charts.setOnLoadCallback(drawCategorySankeyChart);
     },
     methods: {
