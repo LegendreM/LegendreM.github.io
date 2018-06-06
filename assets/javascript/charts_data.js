@@ -75,7 +75,6 @@ var projectsData = [
     ['2048', 4, [0], 0, 0, 7, [5], false, 1],
     ['pushswap', 4, [0], 0, 0, 31, [4, 10], false, 1],
     ['computor v1', 4, [0], 0, 0, 31, [4], false, 1],
-    ['cluedo', 11, [0], 0, 0, 7, [11], false, 1],
     ['piscine PHP', 7, [8, 10], 0, 2, 20, [3], false, 1],
     ['libft ASM', 3, [0], 0, 0, 14, [10], false, 1],
     ['exams C', 4, [0], 0, 0, 7, [0],false, 1],

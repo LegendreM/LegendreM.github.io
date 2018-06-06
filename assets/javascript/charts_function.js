@@ -199,7 +199,7 @@ function drawLocationChart() {
     var dataArray = getLocation()
     var data = google.visualization.arrayToDataTable(dataArray);
     var options = {
-        title: 'Places where I worked',
+        title: 'places where I worked',
         pieHole: 0.5,
         'tooltip' : {
             trigger: 'none'
