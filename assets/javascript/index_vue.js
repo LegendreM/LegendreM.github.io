@@ -5,6 +5,7 @@ var app = new Vue({
         frameworkData: frameworkData,
         dbData: dbData,
         categoryData: categoryData,
+        placeData: placeData,
         projectsData: projectsData,
         panelTabs: [
             {name: "All", isActive: true},
