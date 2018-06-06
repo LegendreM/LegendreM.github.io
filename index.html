@@ -113,18 +113,18 @@
                         </div>
                     </div>
                 </div>
-                            <nav class="panel">
+                <nav class="panel">
                     <p class="panel-heading">
                         Projects
                     </p>
-                    <div class="panel-block">
+                    <!-- <div class="panel-block">
                         <p class="control has-icons-left">
                         <input class="input is-small" type="text" placeholder="Search">
                         <span class="icon is-small is-left">
                             <i class="fa fa-search"></i>
                         </span>
                         </p>
-                    </div>
+                    </div> -->
                     <p class="panel-tabs">
                         <a v-for="(tab, index) in panelTabs" v-bind:class="{ 'is-active': tab.isActive }" v-bind:id="index" v-on:click="clickTab">{{ tab.name }}</a>
                     </p>
