@@ -110,5 +110,5 @@ var jobsData = [
     [2, "Stage", "le stagiaire participera au développement des briques de base d’une librairie de traitement d’images versatiles.", "01/09/2015", "29/02/2016", "https://www.dxo.com/"],
     [3, "Fullstack web developer", "Développement informatique web: Back/Front.", "16/05/2016", "15/08/2016", ""],
     [4, "R&D Lab42", "laboratoire de R&D informatique qui permettra, le développement de POC, de répondre à des problématiques stratégiques pour vente-privee.com.", "02/01/2017", "13/12/2017", "http://vente-privee.com"],
-    [4, "R&D Impulse Fasttrack", "Transverse team which the job consist to: Accelerate startups based at Station F, implement R&D projects, make some technological watch and promote inner-sourcing in compagny", "02/01/2018", "", "vente-privee.com"],
+    [4, "R&D Impulse Fasttrack", "Transverse team which the job consist to accelerate startups based at Station F, implement R&D projects, make some technological watch and promote inner-sourcing in compagny.", "02/01/2018", "", "vente-privee.com"],
 ]
