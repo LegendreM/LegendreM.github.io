@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <link rel=StyleSheet href="assets/bulma-0.4.3/css/bulma.css" type="text/css" media=screen>
     <link rel=StyleSheet href="assets/stylesheet/style.css" type="text/css" media=screen>
     <link rel=StyleSheet href="assets/stylesheet/font-awesome.css" type="text/css" media=screen>
@@ -67,7 +68,7 @@
         <div class="columns main-content">
             <div class="column">
             </div>
-        <div class="column is-narrow">
+            <div class="column is-narrow">
                 <div class="columns">
                     <div class="card profile-container">
                             <div class="card-image">
@@ -78,7 +79,7 @@
                             <div class="card-content">
                                 <div class="media">
                                 <div class="media-left">
-                                    <figure class="image is-64x64">
+                                    <figure class="image is-96x96">
                                     <img src="assets/images/maxime.jpg" alt="Placeholder image">
                                     </figure>
                                 </div>
@@ -95,9 +96,33 @@
                                 </div>
                             </div>
                             </div>
-                    <!-- <div class="profile-container card column is-narrow">
-                        <img src="assets/images/maxime.jpg" alt="Profile" class="profile-picture">
-                    </div> -->
+                </div>
+                <div class="columns profile-container">
+                        <h1 class="title is-3">Experiences</h1>
+                </div>
+                <div class="columns" v-for="job in jobsData">
+                    <div class="card profile-container">
+                        <header class="card-header">
+                            <p>
+                            <div class="card-header-title">
+                                {{job[1]}}
+                            </div>
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <a target="_blank"  v-bind:href="job[5]">@{{placeData[job[0]]}}</a>
+                                <p>{{job[2]}}</p>
+                            </div>
+                            <p v-if="job[4] != ''"><time>{{job[3]}}</time> to <time>{{job[4]}}</time></p>
+                            <p v-else>since <time>{{job[3]}}</time></p>
+                        </div>
+                        <footer class="card-footer">
+                        </footer>
+                    </div>
+                </div>
+                <div class="columns profile-container">
+                        <h1 class="title is-3">Statistics</h1>
                 </div>
                 <div class="columns">
                     <div class="card donnut-chart-container column is-narrow">
@@ -143,18 +168,11 @@
                         </div>
                     </div>
                 </div>
-                <nav class="panel">
-                    <p class="panel-heading">
-                        Projects
-                    </p>
-                    <!-- <div class="panel-block">
-                        <p class="control has-icons-left">
-                        <input class="input is-small" type="text" placeholder="Search">
-                        <span class="icon is-small is-left">
-                            <i class="fa fa-search"></i>
-                        </span>
-                        </p>
-                    </div> -->
+                <div class="columns profile-container">
+                        <h1 class="title is-3">Projects</h1>
+                </div>
+                <div class="columns">
+                <nav class="panel profile-container">
                     <p class="panel-tabs">
                         <a v-for="(tab, index) in panelTabs" v-bind:class="{ 'is-active': tab.isActive }" v-bind:id="index" v-on:click="clickTab">{{ tab.name }}</a>
                     </p>
@@ -177,6 +195,7 @@
                         </div>
                     </a>
                 </nav>
+                </div>
             </div>
             <div class="column">
             </div>

@@ -7,6 +7,7 @@ var app = new Vue({
         categoryData: categoryData,
         placeData: placeData,
         projectsData: projectsData,
+        jobsData: jobsData,
         panelTabs: [
             {name: "All", isActive: true},
             {name: "Public", isActive: false, filters: {index: 7, value: true}},
