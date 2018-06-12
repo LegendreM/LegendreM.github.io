@@ -1,3 +1,7 @@
+#app {
+    overflow: hidden;
+}
+
 .main-content {
     margin-top: 20px;
 }
@@ -52,6 +56,23 @@ margin-left: 180px;
 
 .lang-tag {
     margin-left: 5px; 
+}
+
+.profile-container {
+margin: 5px;
+width: 810px;
+overflow: hidden;
+}
+
+.profile-picture {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 @media only screen and (max-width: 500px) {
